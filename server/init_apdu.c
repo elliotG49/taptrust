@@ -46,7 +46,7 @@ int main(void) {
 
     // Poll for a target (card) before sending APDU command
     printf("Polling for target...\n");
-    int targetCount = nfc_initiator_poll_target(pnd, nm, 1, 2, 2, &nt);
+    int targetCount = nfc_initiator_poll_target(pnd, nm, 1, 4, 4, &nt);
     if (targetCount <= 0) {
         fprintf(stderr, "No target found. Please place a card or enable card emulation on the client device.\n");
         nfc_close(pnd);
