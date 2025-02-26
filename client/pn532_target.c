@@ -15,7 +15,7 @@ if ((file = open(i2cDevice, O_RDWR)) < 0) {
 }
 
 // Set the I2C slave address for the PN532 (commonly 0x48)
-int addr = 0x48;
+int addr = 0x24;
 if (ioctl(file, I2C_SLAVE, addr) < 0) {
     perror("Failed to acquire bus access or talk to PN532");
     close(file);
